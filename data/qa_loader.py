@@ -20,7 +20,7 @@ from .categories import CategoryDeterminer
 FILEPATH = os.path.dirname(os.path.abspath(__file__))
 
 class QALoader(DataLoader):
-    def __init__(self, alphabet, filename='webmd-qas.json', **kwargs):
+    def __init__(self, alphabet, filename='webmdQAs.json', **kwargs):
         """ TODO: Class description.
         """
         self.dump_filename = filename
@@ -347,5 +347,5 @@ class ExtendedQALoader(QALoader):
 
 
 class HealthtapQALoader(QALoader):
-    def __init__(self, filename='healthtap-qas.json', **kwargs):
+    def __init__(self, filename='healthtapQAs.json', **kwargs):
         super().__init__(filename=filename, **kwargs)
