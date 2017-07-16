@@ -73,6 +73,8 @@ class QALoader(DataLoader):
 
             # Join similar categories (tags) and define a "categories" key for
             # each observation
+            # NOTE: Due to ownership issues, this class has been modified, and
+            #       will not generalize to new data.
             category_determiner = CategoryDeterminer(verbose=self.verbose)
             tags = set()
             for x in data:
